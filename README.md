@@ -16,3 +16,9 @@ dbt run --select stg_yellow_taxi_data
 
 -- select * from {{ source('staging','yellow_taxi_data') }}
 -- limit 100
+
+
+
+dbt seed
+
+dbt seed --full-refresh
