@@ -11,3 +11,8 @@ dbt run --select stg_yellow_taxi_data
 
  ## To sownload the dependencies we use below code
  dbt deps
+
+ -- {{ config(materialized="view") }}
+
+-- select * from {{ source('staging','yellow_taxi_data') }}
+-- limit 100
