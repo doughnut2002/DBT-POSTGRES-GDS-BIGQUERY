@@ -1,0 +1,18 @@
+services:
+  pg-database:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=shekhar
+      - POSTGRES_DB=nyc_taxi
+    volumes:
+      - "./posgres_data:/var/lib/postgressql/data:rw" 
+    ports:
+      - "5432:5432"
+  pg-admin:
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=shekhar@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=shekhar
+    ports:
+      - "8080:80"
