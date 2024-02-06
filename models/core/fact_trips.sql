@@ -8,7 +8,7 @@
 with green_tripdata as (
     select *, 
         'Green' as service_type
-    from {{ ref('stg_green_taxi_deta') }}
+    from {{ ref('stg_green_taxi_data') }}
 ), 
 yellow_tripdata as (
     select *, 
@@ -39,7 +39,6 @@ select trips_unioned.tripid,
     trips_unioned.store_and_fwd_flag, 
     trips_unioned.passenger_count, 
     trips_unioned.trip_distance, 
-    trips_unioned.trip_type, 
     trips_unioned.fare_amount, 
     trips_unioned.extra, 
     trips_unioned.mta_tax, 

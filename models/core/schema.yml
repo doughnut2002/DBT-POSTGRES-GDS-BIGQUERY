@@ -84,10 +84,6 @@ models:
         data_type: numeric
         description: ""
 
-      - name: trip_type
-        data_type: int64
-        description: ""
-
       - name: fare_amount
         data_type: numeric
         description: ""
